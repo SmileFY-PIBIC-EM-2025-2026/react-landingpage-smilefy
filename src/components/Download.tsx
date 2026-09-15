@@ -1,3 +1,5 @@
+import { Check } from 'lucide-react';
+
 export default function Download() {
   return (
     <section id="download">
@@ -25,10 +27,10 @@ export default function Download() {
           </p>
           <div id="listad">
             <ul>
-              <li><i className="fa-solid fa-check" /> Análise em segundos com IA avançada</li>
-              <li><i className="fa-solid fa-check" /> Interface intuitiva e fácil de usar</li>
-              <li><i className="fa-solid fa-check" /> Resultados salvos automaticamente</li>
-              <li><i className="fa-solid fa-check" /> Compatível com o padronizador SmileFY</li>
+              <li><Check size={16} /> Análise em segundos com IA avançada</li>
+              <li><Check size={16} /> Interface intuitiva e fácil de usar</li>
+              <li><Check size={16} /> Resultados salvos automaticamente</li>
+              <li><Check size={16} /> Compatível com o padronizador SmileFY</li>
             </ul>
           </div>
           <div id="btnd">

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { ArrowUp } from 'lucide-react';
 
 export default function ScrollTop() {
   const [visible, setVisible] = useState(false);
@@ -12,10 +13,11 @@ export default function ScrollTop() {
   return (
     <button
       id="scroll_top"
+      aria-label="Voltar ao topo"
       className={visible ? 'show' : ''}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >
-      <i className="fa-solid fa-arrow-up" />
+      <ArrowUp size={20} />
     </button>
   );
 }

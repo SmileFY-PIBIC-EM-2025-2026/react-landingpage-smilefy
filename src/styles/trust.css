@@ -1,0 +1,62 @@
+#confianca {
+  background-color: var(--bg-color2);
+  padding: 60px 20px;
+}
+
+#confianca_title {
+  padding: 20px;
+  font-size: 2em;
+  text-align: center;
+  color: var(--text-color);
+  font-weight: 900;
+}
+
+#confianca_flex {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#confianca_flex article {
+  padding: 30px 24px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 3px solid #2b6a6d37;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#confianca_flex article svg:first-child {
+  width: 2em;
+  height: 2em;
+  color: #0f3638;
+  margin-bottom: 15px;
+  margin-inline: auto;
+  display: block;
+}
+
+#confianca_flex article h3 {
+  font-size: 1.2em;
+  color: #0f3638;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+#confianca_flex article p {
+  font-size: 0.95em;
+  color: #0f3638;
+  line-height: 1.4em;
+  flex: 1;
+}
+
+@media screen and (max-width: 900px) {
+  #confianca_flex {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}

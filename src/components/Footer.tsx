@@ -1,3 +1,5 @@
+import { Mail, Aperture } from 'lucide-react';
+
 export default function Footer() {
   return (
     <footer>
@@ -10,8 +12,8 @@ export default function Footer() {
         <ul className="footer-list">
           <li><h3>Contatos</h3></li>
           <li>
-            <a href="#" className="footer-link">
-              <i className="fa-regular fa-envelope" /> smilefy@gmail.com
+            <a href="mailto:smilefy@gmail.com" className="footer-link">
+              <Mail size={16} /> smilefy@gmail.com
             </a>
           </li>
           <li>
@@ -21,7 +23,7 @@ export default function Footer() {
               rel="noreferrer"
               className="footer-link"
             >
-              <i className="fa-brands fa-instagram" /> @smile.f.y
+              <Aperture size={16} /> @smile.f.y
             </a>
           </li>
         </ul>

@@ -4,6 +4,9 @@ import './styles/navbar.css';
 import './styles/cta.css';
 import './styles/home.css';
 import './styles/obj.css';
+import './styles/modo.css';
+import './styles/trajetoria.css';
+import './styles/trust.css';
 import './styles/download.css';
 import './styles/footer.css';
 import './styles/quem.css';
@@ -12,6 +15,9 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import HomeSection from './components/HomeSection';
 import Objectives from './components/Objectives';
+import HowItWorks from './components/HowItWorks';
+import Timeline from './components/Timeline';
+import Trust from './components/Trust';
 import Download from './components/Download';
 import Team from './components/Team';
 import Footer from './components/Footer';
@@ -20,8 +26,7 @@ import ScrollTop from './components/ScrollTop';
 export default function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     const saved = localStorage.getItem('theme');
-    if (saved === 'dark' || saved === 'light') return saved;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return saved === 'dark' || saved === 'light' ? saved : 'light';
   });
 
   useEffect(() => {
@@ -37,6 +42,9 @@ export default function App() {
       <Hero />
       <HomeSection />
       <Objectives />
+      <HowItWorks />
+      <Timeline />
+      <Trust />
       <Download />
       <Team />
       <ScrollTop />

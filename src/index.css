@@ -22,10 +22,6 @@
   --text-color2: black;
   --text-color-fusion: aliceblue;
   --text-color-seta: #2b6a6d;
-
-  --grad-1: rgba(23, 80, 106, 0.39);
-  --grad-2: rgba(240, 248, 255, 0.86);
-  --grad-3: rgba(240, 248, 255, 1);
 }
 
 [data-theme="dark"] {
@@ -40,30 +36,30 @@
   --text-color2: white;
   --text-color-fusion: #17506a;
   --text-color-seta: white;
-
-  --grad-3: rgba(23, 80, 106, 0.8);
-  --grad-1: rgba(15, 23, 42, 0.678);
-  --grad-2: rgba(23, 80, 106, 0.8);
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   background-color: var(--bg-color2);
-  overflow-x: hidden;
+  overflow-x: clip;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .theme_toggle {
   background: none;
   border: none;
-  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
   color: var(--text-color);
 }
 
-.theme_toggle i.fa-sun {
+.theme_toggle .sun-icon {
   color: #facc15;
 }
 

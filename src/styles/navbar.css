@@ -23,7 +23,7 @@ header {
   font-size: 2em;
   color: var(--text-color);
   font-weight: 900;
-  margin-right: 200px;
+  margin-right: 60px;
   margin-left: 0;
 }
 
@@ -35,7 +35,7 @@ header {
 #nav_list {
   display: flex;
   list-style: none;
-  gap: 48px;
+  gap: 28px;
 }
 
 .nav_item a {
@@ -59,10 +59,10 @@ header {
   }
 
   #mobile_btn {
-    display: block;
+    display: inline-flex;
+    align-items: center;
     border: none;
     background-color: transparent;
-    font-size: 1.5rem;
     cursor: pointer;
     color: var(--text-color);
   }

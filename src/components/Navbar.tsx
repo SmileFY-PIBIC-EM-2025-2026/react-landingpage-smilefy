@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Sun, Moon, X, Menu } from 'lucide-react';
 
 interface NavbarProps {
   theme: 'light' | 'dark';
@@ -22,17 +23,19 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
           <li className="nav_item active"><a href="#home">Home</a></li>
           <li className="nav_item"><a href="#obj">Objetivos</a></li>
           <li className="nav_item"><a href="#modo_de_uso">Modo de uso</a></li>
+          <li className="nav_item"><a href="#trajetoria">Trajetória</a></li>
+          <li className="nav_item"><a href="#confianca">Confiança</a></li>
           <li className="nav_item"><a href="#download">Download (App)</a></li>
           <li className="nav_item"><a href="#quem">Quem somos?</a></li>
           <li className="nav_item">
             <button className="theme_toggle" aria-label="Alternar tema" onClick={toggleTheme}>
-              <i className={theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon'} />
+              {theme === 'dark' ? <Sun className="sun-icon" size={18} /> : <Moon size={18} />}
             </button>
           </li>
         </ul>
 
-        <button id="mobile_btn" onClick={() => setMobileOpen(prev => !prev)}>
-          <i className={mobileOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'} />
+        <button id="mobile_btn" aria-label="Abrir menu" onClick={() => setMobileOpen(prev => !prev)}>
+          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </nav>
 
@@ -40,12 +43,14 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
         <ul id="mobile_nav_list">
           <li className="nav_item"><a href="#home" onClick={closeMobile}>Home</a></li>
           <li className="nav_item"><a href="#obj" onClick={closeMobile}>Objetivos</a></li>
-          <li className="nav_item"><a href="#modo-de-uso" onClick={closeMobile}>Modo de uso</a></li>
+          <li className="nav_item"><a href="#modo_de_uso" onClick={closeMobile}>Modo de uso</a></li>
+          <li className="nav_item"><a href="#trajetoria" onClick={closeMobile}>Trajetória</a></li>
+          <li className="nav_item"><a href="#confianca" onClick={closeMobile}>Confiança</a></li>
           <li className="nav_item"><a href="#download" onClick={closeMobile}>Download (App)</a></li>
           <li className="nav_item"><a href="#quem" onClick={closeMobile}>Quem somos?</a></li>
           <li className="nav_item">
             <button className="theme_toggle" aria-label="Alternar tema" onClick={toggleTheme}>
-              <i className={theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon'} />
+              {theme === 'dark' ? <Sun className="sun-icon" size={18} /> : <Moon size={18} />}
             </button>
           </li>
         </ul>

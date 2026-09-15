@@ -64,10 +64,19 @@
 }
 
 #botao_flex ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   text-align: left;
   line-height: 1.4;
   color: #001730;
   font-weight: 400;
+  margin-bottom: 8px;
+}
+
+#botao_flex ul li svg {
+  flex-shrink: 0;
+  color: #17506a;
 }
 
 #celulard {
@@ -150,7 +159,7 @@
 
 @media screen and (max-width: 350px) {
   #botao_flex ul li {
-    text-align: center;
+    justify-content: center;
   }
 }
 
