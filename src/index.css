@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+:root {
+  --bg-color: rgba(240, 248, 255, 0.9);
+  --bg-color2: aliceblue;
+  --bg-color3: rgba(240, 248, 255, 0.9);
+  --bg-color4: #afdccd;
+  --bg-color5: rgba(240, 248, 255, 0.9);
+  --bg-footer: #17506a;
+  --bg-fusion: #17506a;
+  --text-color: #17506a;
+  --text-color2: black;
+  --text-color-fusion: aliceblue;
+  --text-color-seta: #2b6a6d;
+
+  --grad-1: rgba(23, 80, 106, 0.39);
+  --grad-2: rgba(240, 248, 255, 0.86);
+  --grad-3: rgba(240, 248, 255, 1);
+}
+
+[data-theme="dark"] {
+  --bg-color: rgba(23, 80, 106, 0.9);
+  --bg-color2: #17506a;
+  --bg-color3: #76bbbf;
+  --bg-color4: #17506a;
+  --bg-color5: #afdccd;
+  --bg-footer: #0d1b2a;
+  --bg-fusion: #afdccd;
+  --text-color: aliceblue;
+  --text-color2: white;
+  --text-color-fusion: #17506a;
+  --text-color-seta: white;
+
+  --grad-3: rgba(23, 80, 106, 0.8);
+  --grad-1: rgba(15, 23, 42, 0.678);
+  --grad-2: rgba(23, 80, 106, 0.8);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color2);
+  overflow-x: hidden;
+}
+
+.theme_toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.theme_toggle i.fa-sun {
+  color: #facc15;
+}
+
+#scroll_top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #17506a;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#scroll_top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#scroll_top:hover {
+  background-color: #2b6a6d;
+}
+
+.btn_default {
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 12px 28px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
