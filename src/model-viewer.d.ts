@@ -1,6 +1,6 @@
-import type { CSSProperties } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 
-declare global {
+declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {
       'model-viewer': {
@@ -11,7 +11,7 @@ declare global {
         'auto-rotate'?: boolean | '';
         'shadow-intensity'?: string;
         style?: CSSProperties;
-        children?: React.ReactNode;
+        children?: ReactNode;
         className?: string;
       };
     }

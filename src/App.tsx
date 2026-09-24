@@ -18,7 +18,6 @@ import Objectives from './components/Objectives';
 import HowItWorks from './components/HowItWorks';
 import Timeline from './components/Timeline';
 import Trust from './components/Trust';
-import Download from './components/Download';
 import Team from './components/Team';
 import Footer from './components/Footer';
 import ScrollTop from './components/ScrollTop';
@@ -45,7 +44,6 @@ export default function App() {
       <HowItWorks />
       <Timeline />
       <Trust />
-      <Download />
       <Team />
       <ScrollTop />
       <Footer />
